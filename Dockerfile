@@ -8,7 +8,9 @@ RUN apk --no-cache add build-base wget xz
 
 RUN wget https://github.com/upx/upx/releases/download/v${UPX_VERSION}/upx-${UPX_VERSION}-amd64_linux.tar.xz 
 
-RUN xz -d -c /upx-${UPX_VERSION}-amd64_linux.tar.xz | tar -xOf - upx-${UPX_VERSION}-amd64_linux/upx > /bin/upx && \
+RUN xz -d -c /upx-${UPX_VERSION}-amd64_linux.tar.xz \
+    | tar -xOf - upx-${UPX_VERSION}-amd64_linux/upx \
+    > /bin/upx && \
     chmod a+x /bin/upx
 
 FROM scratch
