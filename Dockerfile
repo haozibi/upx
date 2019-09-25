@@ -1,8 +1,8 @@
-FROM alpine:3.9 as builder
+FROM alpine:3.10 as builder
 
 ARG UPX_VERSION=3.95
 
-RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories
+# RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories
 
 RUN apk --no-cache add build-base wget xz
 
