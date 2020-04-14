@@ -1,6 +1,6 @@
-FROM alpine:3.10 as builder
+FROM alpine:3.11 as builder
 
-ARG UPX_VERSION=3.95
+ARG UPX_VERSION=3.96
 
 # RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories
 
